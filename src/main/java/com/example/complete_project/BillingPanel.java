@@ -14,7 +14,7 @@ import model.BilledProduct;
 
 
 public class BillingPanel extends JPanel{
-	static JScrollPane invoicePanel;
+	//static JScrollPane invoicePanel;
 	static JScrollPane invoicePane;
 	public BillingPanel() {
 //		Calendar cal = new GregorianCalendar();
@@ -30,11 +30,11 @@ public class BillingPanel extends JPanel{
 		
 		
 		setPreferredSize(new Dimension(500, 500));
-		invoicePanel = new JScrollPane();
-		invoicePanel.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
-		invoicePanel.setLayout(null);
-		invoicePanel.setPreferredSize(new Dimension(500,500));
-		invoicePanel.setBackground(Color.WHITE);
+		invoicePane = new JScrollPane();
+		invoicePane.setBackground(Color.gray);
+		invoicePane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
+		//invoicePane.setLayout(null);
+		invoicePane.setPreferredSize(new Dimension(500,500));
 //		invoicePanel.setBorder(new LineBorder(Color.BLACK));
 		
 		billTitle();
@@ -45,7 +45,7 @@ public class BillingPanel extends JPanel{
 //		invoicePane.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_ALWAYS);
 //		invoicePane.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
 		
-		add(invoicePanel);
+		add(invoicePane);
 	}
 	public static void billTitle() {
 		int tableHeaderFontSize=14;
@@ -53,33 +53,33 @@ public class BillingPanel extends JPanel{
 		JLabel title = new JLabel("Gully Momo",SwingConstants.CENTER);
 		title.setFont(new Font("Algerian",1,24));
 		title.setBounds(0,20,500,30);
-		invoicePanel.add(title);
+		invoicePane.add(title);
 		
 		JLabel snLabel = new JLabel("SN", SwingConstants.CENTER);
 		snLabel.setFont(new Font("Arial",1,tableHeaderFontSize));
 		snLabel.setBounds(20,70,20,20);
-		invoicePanel.add(snLabel);
+		invoicePane.add(snLabel);
 		
 
 		JLabel itemLabel = new JLabel("Items", SwingConstants.CENTER);
 		itemLabel.setFont(new Font("Arial",1,tableHeaderFontSize));
 		itemLabel.setBounds(40,70,200,20);
-		invoicePanel.add(itemLabel);
+		invoicePane.add(itemLabel);
 		
 		JLabel rateLabel = new JLabel("Rate", SwingConstants.CENTER);
 		rateLabel.setFont(new Font("Arial",1,tableHeaderFontSize));
 		rateLabel.setBounds(280,70,40,20);
-		invoicePanel.add(rateLabel);
+		invoicePane.add(rateLabel);
 		
 		JLabel qtyLabel = new JLabel("Qty", SwingConstants.CENTER);
 		qtyLabel.setFont(new Font("Arial",1,tableHeaderFontSize));
 		qtyLabel.setBounds(360,70,30,20);
-		invoicePanel.add(qtyLabel);
+		invoicePane.add(qtyLabel);
 		
 		JLabel amountLabel = new JLabel("Amount", SwingConstants.CENTER);
 		amountLabel.setFont(new Font("Arial",1,tableHeaderFontSize));
 		amountLabel.setBounds(410,70,70,20);
-		invoicePanel.add(amountLabel);
+		invoicePane.add(amountLabel);
 		
 		
 	}

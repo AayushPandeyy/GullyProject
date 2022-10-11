@@ -20,6 +20,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JScrollBar;
 import javax.swing.JScrollPane;
+import javax.swing.ScrollPaneLayout;
 import javax.swing.SwingConstants;
 import javax.swing.border.LineBorder;
 
@@ -148,11 +149,12 @@ public class ProductCard extends JPanel {
 				
 				
 //				JScrollPane jpane = new JScrollPane(MainFrame.billingPanel);
-				MainFrame.billingPanel.invoicePanel.removeAll();
-				MainFrame.billingPanel.invoicePanel.add(productTablePanel);
-				MainFrame.billingPanel.revalidate();
-				MainFrame.billingPanel.repaint();
+				MainFrame.billingPanel.invoicePane.removeAll();
+				MainFrame.billingPanel.invoicePane.add(productTablePanel);
+				MainFrame.billingPanel.invoicePane.revalidate();
+				MainFrame.billingPanel.invoicePane.repaint();
 				MainFrame.billingPanel.billTitle();
+				MainFrame.billingPanel.invoicePane.setLayout(new ScrollPaneLayout());
 				
 				
 			}

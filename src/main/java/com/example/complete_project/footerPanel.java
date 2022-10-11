@@ -58,7 +58,7 @@ public class footerPanel extends JPanel{
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				// TODO Auto-generated method stub
-				MainFrame.billingPanel.invoicePanel.removeAll();
+				MainFrame.billingPanel.invoicePane.removeAll();
 				
 				MainFrame.billingPanel.revalidate();
 				MainFrame.billingPanel.repaint();
@@ -151,13 +151,13 @@ public class footerPanel extends JPanel{
 		JLabel bpitemLabel = new JLabel("Total");
 		bpitemLabel.setFont(new Font("Arial",1,14));
 		bpitemLabel.setBounds(40,490,200,20);
-		BillingPanel.invoicePanel.add(bpitemLabel);
+		BillingPanel.invoicePane.add(bpitemLabel);
 		
 		JLabel bptotalLabel = new JLabel();
 		bptotalLabel.setText(String.valueOf(pcard.total));
 		bptotalLabel.setFont(new Font("Arial",1,14));
 		bptotalLabel.setBounds(410,490,200,20);
-		BillingPanel.invoicePanel.add(bptotalLabel);
+		BillingPanel.invoicePane.add(bptotalLabel);
 //		clear = true;
 		MainFrame.billingPanel.revalidate();
 		MainFrame.billingPanel.repaint();
