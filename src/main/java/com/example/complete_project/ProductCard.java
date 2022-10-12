@@ -32,7 +32,7 @@ public class ProductCard extends JPanel {
 	static int a;
 	static int b;
 	static ArrayList<BilledProduct> billItems = new ArrayList<BilledProduct>();
-	static float total;
+	public static float total;
 	public ProductCard(Product p) throws IOException{
 		this.p=p;
 		
@@ -107,9 +107,9 @@ public class ProductCard extends JPanel {
 				}
 				
 				JPanel productTablePanel = new JPanel();
-				productTablePanel.setBackground(Color.WHITE);
+				productTablePanel.setBackground(Color.CYAN);
 				productTablePanel.setLayout(null);
-				productTablePanel.setBounds(0, 100, 500, 380);
+				productTablePanel.setBounds(0, 100, 500, 350);
 //				productTablePanel.setBorder(new LineBorder(Color.BLACK));
 				JScrollPane productTablePane = new JScrollPane(productTablePanel);
 				b=0;

@@ -7,6 +7,7 @@ import java.awt.Font;
 import java.awt.GridLayout;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
+import java.sql.SQLException;
 
 import javax.swing.JButton;
 import javax.swing.JLabel;
@@ -16,6 +17,7 @@ import javax.swing.SwingConstants;
 public class footerPanel extends JPanel{
 	public static boolean clear = false;
 	static JButton resetButton;
+	public static JLabel bptotalLabel;
 	public static ProductCard pcard = new ProductCard();
 	public footerPanel() {
 		
@@ -102,7 +104,13 @@ public class footerPanel extends JPanel{
 				}else {
 					items(pcard.b);
 				}
-					
+				com.example.discount.App app = new com.example.discount.App();
+				try {
+					app.main(null);
+				} catch (ClassNotFoundException | SQLException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
 				}
 				
 				
@@ -153,7 +161,7 @@ public class footerPanel extends JPanel{
 		bpitemLabel.setBounds(40,490,200,20);
 		BillingPanel.invoicePane.add(bpitemLabel);
 		
-		JLabel bptotalLabel = new JLabel();
+		bptotalLabel = new JLabel();
 		bptotalLabel.setText(String.valueOf(pcard.total));
 		bptotalLabel.setFont(new Font("Arial",1,14));
 		bptotalLabel.setBounds(410,490,200,20);

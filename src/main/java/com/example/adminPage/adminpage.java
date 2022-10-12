@@ -125,6 +125,45 @@ public class adminpage extends JPanel{
 		editButton.setBounds(450,300,400,80);
 		mainPanel.add(editButton);
 		
+		editButton.addMouseListener(new MouseListener() {
+			
+			@Override
+			public void mouseReleased(MouseEvent e) {
+				// TODO Auto-generated method stub
+				
+			}
+			
+			@Override
+			public void mousePressed(MouseEvent e) {
+				// TODO Auto-generated method stub
+				
+			}
+			
+			@Override
+			public void mouseExited(MouseEvent e) {
+				// TODO Auto-generated method stub
+				
+			}
+			
+			@Override
+			public void mouseEntered(MouseEvent e) {
+				// TODO Auto-generated method stub
+				
+			}
+			
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				// TODO Auto-generated method stub
+				com.example.edititemPage.App app = new com.example.edititemPage.App();
+				try {
+					app.main(null);
+				} catch (ClassNotFoundException | SQLException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
+			}
+		});
+		
 		JButton showButton = new JButton();
 		showButton.setText("Show Item");
 //		editButton.setSize(new Dimension(150,450));

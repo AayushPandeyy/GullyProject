@@ -26,6 +26,7 @@ public class mainPanel extends JPanel{
 	static JComboBox categoryBox;
 	ProductDao pdao = new ProductDao();
 	public int i;
+	static String Itemname;
 	static long itemId;
 	static String name;
 	static int b;
@@ -115,7 +116,7 @@ public class mainPanel extends JPanel{
 					delButton db= new delButton();
 					db.mainpanel.setBounds(450,b,200,20);
 					itemsPanel.mainpanel.add(db.mainpanel);
-					
+					Itemname = p.getName();
 					itemId = p.getId();
 					
 					

@@ -5,6 +5,9 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
+import com.example.additemPage.mainPanel;
+import com.example.deletePage.*;
+
 public class ProductDao extends AbstractDao<Product> {
 	
 	PreparedStatement pstm;
@@ -80,11 +83,11 @@ public class ProductDao extends AbstractDao<Product> {
 	}
 
 	public int delete(long id,String name) throws ClassNotFoundException, SQLException {
-		sql = "delete from ? where id = ?";
+		sql = "delete from "+name+" where name = ?";
 		connect();
 		pstm = con.prepareStatement(sql);
-		pstm.setString(1, name);
-		pstm.setLong(2, id);
+	
+		pstm.setString(1 , "Hello");
 		i = pstm.executeUpdate();
 		disconnect();
 		
