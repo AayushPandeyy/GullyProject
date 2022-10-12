@@ -7,11 +7,13 @@ import java.awt.GridBagLayout;
 import java.awt.GridLayout;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
+import java.sql.SQLException;
 
 import javax.swing.JButton;
 import javax.swing.JPanel;
 import com.example.additemPage.*;
 import com.example.showitemPage.*;
+import com.example.deletePage.*;
 
 public class adminpage extends JPanel{
 	public adminpage() {
@@ -72,7 +74,7 @@ public class adminpage extends JPanel{
 		JButton delButton = new JButton();
 		delButton.setText("Delete Item");
 		delButton.setBounds(450,200,400,80);
-//		delButton.setSize(new Dimension(150,150));
+//		editButton.setSize(new Dimension(150,150));
 		mainPanel.add(delButton);
 		
 		delButton.addMouseListener(new MouseListener() {
@@ -104,6 +106,13 @@ public class adminpage extends JPanel{
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				// TODO Auto-generated method stub
+				com.example.deletePage.App app = new com.example.deletePage.App();
+				try {
+					app.main(null);
+				} catch (ClassNotFoundException | SQLException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
 				
 			}
 		});{

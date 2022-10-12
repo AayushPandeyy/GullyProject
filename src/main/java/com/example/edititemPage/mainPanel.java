@@ -1,4 +1,4 @@
-package com.example.deletePage;
+package com.example.edititemPage;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
@@ -112,7 +112,7 @@ public class mainPanel extends JPanel{
 					pLabel.setBounds(380,b,50,20);
 					itemsPanel.mainpanel.add(pLabel);	
 					
-					delButton db= new delButton();
+					editButton db= new editButton();
 					db.mainpanel.setBounds(450,b,200,20);
 					itemsPanel.mainpanel.add(db.mainpanel);
 					

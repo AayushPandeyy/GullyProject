@@ -79,11 +79,12 @@ public class ProductDao extends AbstractDao<Product> {
 		return i;
 	}
 
-	public int delete(long id) throws ClassNotFoundException, SQLException {
-		sql = "delete from product where id = ?";
+	public int delete(long id,String name) throws ClassNotFoundException, SQLException {
+		sql = "delete from ? where id = ?";
 		connect();
 		pstm = con.prepareStatement(sql);
-		pstm.setLong(1, id);
+		pstm.setString(1, name);
+		pstm.setLong(2, id);
 		i = pstm.executeUpdate();
 		disconnect();
 		
@@ -119,6 +120,12 @@ public class ProductDao extends AbstractDao<Product> {
 		
 		return products;
 		
+	}
+
+	@Override
+	public int delete(long id) throws ClassNotFoundException, SQLException {
+		// TODO Auto-generated method stub
+		return 0;
 	}
 
 }
