@@ -8,12 +8,15 @@ import java.awt.GridLayout;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
+import java.sql.SQLException;
 
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 import com.example.complete_project.BillingPanel;
+import com.example.complete_project.ProductCard;
+import com.example.paymentMethod.App;
 
 public class discountButtons extends JPanel{
 	int i;
@@ -24,9 +27,9 @@ public class discountButtons extends JPanel{
 		int per[] = {0,5,10,20,50,100};
 		setPreferredSize(new Dimension(1000,300));
 		setBackground(Color.LIGHT_GRAY);
-		int x=0;
-		int y=0;
+		
 		JPanel buttons = new JPanel();
+		buttons.setBackground(Color.BLACK);
 		buttons.setLayout(new GridLayout(0,3,20,20));
 		for(i=0;i<per.length;i++) {
 			JButton jb = new JButton(String.valueOf(per[i]));
@@ -37,7 +40,7 @@ public class discountButtons extends JPanel{
 //			x+=20;
 			
 			buttons.add(jb);
-jb.addMouseListener(new MouseListener() {
+			jb.addMouseListener(new MouseListener() {
 				
 				@Override
 				public void mouseReleased(MouseEvent e) {
@@ -66,24 +69,35 @@ jb.addMouseListener(new MouseListener() {
 				@Override
 				public void mouseClicked(MouseEvent e) {
 					// TODO Auto-generated method stub
-					float total = pc.total;
+					com.example.paymentMethod.App app = new com.example.paymentMethod.App();
+					try {
+						App.main(null);
+					} catch (ClassNotFoundException | SQLException e1) {
+						// TODO Auto-generated catch block
+						e1.printStackTrace();
+					}
+					
+					float total = ProductCard.total;
 					float dr = Float.parseFloat(jb.getText()); 
 					float disAmount = dr/100*total;
 					float disTotal = total - disAmount;
 					String gTotal = String.valueOf(disTotal);
 					com.example.complete_project.footerPanel.bptotalLabel.setText(gTotal);
+					
 					JLabel discountLabel = new JLabel("Discount");
 					discountLabel.setFont(new Font("Arial",1,14));
-					discountLabel.setBounds(40,470,200,20);
+					discountLabel.setBounds(40,450,200,20);
 					BillingPanel.invoicePane.add(discountLabel);
 					
 					JLabel discountAmt = new JLabel();
-					discountAmt.setText(gTotal);
+					discountAmt.setText(String.valueOf(disAmount));
 					discountAmt.setFont(new Font("Arial",1,14));
-					discountAmt.setBounds(410,470,200,20);
+					discountAmt.setBounds(410,450,200,20);
 					BillingPanel.invoicePane.add(discountAmt);
+					BillingPanel.invoicePane.revalidate();
+					BillingPanel.invoicePane.repaint();
 					
-					
+					mainFrame.frame.dispose();
 					
 				}
 			});

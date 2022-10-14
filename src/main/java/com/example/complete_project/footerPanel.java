@@ -158,13 +158,13 @@ public class footerPanel extends JPanel{
 	public static void items(int i) {
 		JLabel bpitemLabel = new JLabel("Total");
 		bpitemLabel.setFont(new Font("Arial",1,14));
-		bpitemLabel.setBounds(40,490,200,20);
+		bpitemLabel.setBounds(40,470,200,20);
 		BillingPanel.invoicePane.add(bpitemLabel);
 		
 		bptotalLabel = new JLabel();
 		bptotalLabel.setText(String.valueOf(pcard.total));
 		bptotalLabel.setFont(new Font("Arial",1,14));
-		bptotalLabel.setBounds(410,490,200,20);
+		bptotalLabel.setBounds(410,470,200,20);
 		BillingPanel.invoicePane.add(bptotalLabel);
 //		clear = true;
 		MainFrame.billingPanel.revalidate();

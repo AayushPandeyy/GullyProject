@@ -1,4 +1,4 @@
-package com.example.discount;
+package com.example.paymentMethod;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
@@ -21,8 +21,8 @@ public static JFrame frame;
 //			frame.setPreferredSize(new Dimension(1000,100));
 			frame.setLayout(new BorderLayout());
 //			frame.setBackground(Color.BLUE);
-			discountButtons db = new discountButtons();
-			frame.add(db,BorderLayout.CENTER);
+			paymentPanel pay = new paymentPanel();
+			frame.add(pay,BorderLayout.CENTER);
 			frame.setVisible(true);
 	}
 }

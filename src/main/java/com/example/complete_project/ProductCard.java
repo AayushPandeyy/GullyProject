@@ -107,7 +107,7 @@ public class ProductCard extends JPanel {
 				}
 				
 				JPanel productTablePanel = new JPanel();
-				productTablePanel.setBackground(Color.CYAN);
+				productTablePanel.setBackground(Color.green);
 				productTablePanel.setLayout(null);
 				productTablePanel.setBounds(0, 100, 500, 350);
 //				productTablePanel.setBorder(new LineBorder(Color.BLACK));
