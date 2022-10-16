@@ -11,4 +11,5 @@ public interface DataAccessObject<T> {
 	public ArrayList<T> getAll() throws ClassNotFoundException, SQLException;
 	public int update(T t) throws ClassNotFoundException, SQLException;
 	public int delete(long id) throws ClassNotFoundException, SQLException;
+	int update(BilledProduct p, int qty) throws ClassNotFoundException, SQLException;
 }

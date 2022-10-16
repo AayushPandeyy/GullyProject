@@ -1,6 +1,7 @@
 package com.example.complete_project;
 
 import java.awt.Button;
+import java.awt.Color;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.GridLayout;
@@ -19,7 +20,7 @@ public class ProductsPanel extends JPanel {
 	public ProductsPanel(ArrayList<Product> products) throws IOException {
 		GridBagConstraints gbc = new GridBagConstraints();  
         
-         
+         setBackground(Color.ORANGE);
         GridBagLayout layout = new GridBagLayout();  
 		setLayout(layout);
 		

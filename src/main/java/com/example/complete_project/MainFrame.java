@@ -20,6 +20,7 @@ import model.ProductDao;
 
 public class MainFrame{
 	public static JFrame frame;
+	
 	static BillingPanel billingPanel;
 	ArrayList<Product> products = null;
 	static String title;

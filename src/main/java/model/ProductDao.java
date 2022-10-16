@@ -131,4 +131,10 @@ public class ProductDao extends AbstractDao<Product> {
 		return 0;
 	}
 
+	@Override
+	public int update(BilledProduct p, int qty) throws ClassNotFoundException, SQLException {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
 }

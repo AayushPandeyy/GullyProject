@@ -20,6 +20,11 @@ import com.example.paymentMethod.App;
 
 public class discountButtons extends JPanel{
 	int i;
+	public static float total;
+	public static float dr;
+	public static float disAmount;
+	public static float disTotal;
+	public static String gTotal;
 	static com.example.complete_project.ProductCard pc = new com.example.complete_project.ProductCard();
 	public discountButtons() {
 		setLayout(new BorderLayout());
@@ -77,11 +82,11 @@ public class discountButtons extends JPanel{
 						e1.printStackTrace();
 					}
 					
-					float total = ProductCard.total;
-					float dr = Float.parseFloat(jb.getText()); 
-					float disAmount = dr/100*total;
-					float disTotal = total - disAmount;
-					String gTotal = String.valueOf(disTotal);
+					 total = ProductCard.total;
+					 dr = Float.parseFloat(jb.getText()); 
+					 disAmount = dr/100*total;
+					 disTotal = total - disAmount;
+					 gTotal = String.valueOf(disTotal);
 					com.example.complete_project.footerPanel.bptotalLabel.setText(gTotal);
 					
 					JLabel discountLabel = new JLabel("Discount");

@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
+
 package com.example.jdbc;
 
 import java.awt.event.ActionEvent;
@@ -10,15 +7,10 @@ import com.example.adminLogin.*;
 
 import javax.swing.JFrame;
 
-/**
- *
- * @author Acer
- */
+
 public class AdminUser extends javax.swing.JFrame {
 
-    /**
-     * Creates new form AdminUser
-     */
+    
     public AdminUser() {
         initComponents();
 //        setExtendedState(JFrame.MAXIMIZED_BOTH); 

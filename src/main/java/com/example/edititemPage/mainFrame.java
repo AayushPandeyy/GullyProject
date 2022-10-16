@@ -13,9 +13,10 @@ import model.ProductDao;
 public class mainFrame {
 	static itemsPanel ipanel;
 	public int i;
+	static JFrame frame;
 	ProductDao pdao = new ProductDao();
 	public mainFrame() throws ClassNotFoundException, SQLException {
-		JFrame frame = new JFrame("Main Frame");
+		 frame = new JFrame("Main Frame");
 		frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
 		//frame.setUndecorated(true);
 		frame.setDefaultCloseOperation(3);

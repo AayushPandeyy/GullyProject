@@ -5,8 +5,9 @@ import java.awt.BorderLayout;
 import javax.swing.JFrame;
 
 public class mainFrame {
+	static JFrame frame;
 	public mainFrame() {
-		JFrame frame = new JFrame("Main Frame");
+		 frame = new JFrame("Main Frame");
 		frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
 		//frame.setUndecorated(true);
 		frame.setDefaultCloseOperation(3);

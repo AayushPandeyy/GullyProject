@@ -14,8 +14,9 @@ public class mainFrame {
 	static itemsPanel ipanel;
 	public int i;
 	ProductDao pdao = new ProductDao();
+	static JFrame frame;
 	public mainFrame() throws ClassNotFoundException, SQLException {
-		JFrame frame = new JFrame("Main Frame");
+		 frame = new JFrame("Main Frame");
 		frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
 		//frame.setUndecorated(true);
 		frame.setDefaultCloseOperation(3);

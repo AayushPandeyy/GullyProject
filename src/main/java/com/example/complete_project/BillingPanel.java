@@ -15,7 +15,8 @@ import model.BilledProduct;
 
 public class BillingPanel extends JPanel{
 	//static JScrollPane invoicePanel;
-	public static JScrollPane invoicePane;
+	public static JPanel invoicePane;
+	public static int billNo;
 	public BillingPanel() {
 		
         setLayout(new BorderLayout());
@@ -24,15 +25,16 @@ public class BillingPanel extends JPanel{
 		
 		
 		setPreferredSize(new Dimension(500, 500));
-		invoicePane = new JScrollPane();
-		invoicePane.setBackground(Color.CYAN);
-		invoicePane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
-		//invoicePane.setLayout(null);
+		invoicePane = new JPanel();
+		invoicePane.setBackground(Color.yellow);
+//		invoicePane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
+		invoicePane.setLayout(null);
 		invoicePane.setPreferredSize(new Dimension(500,500));
 //		invoicePanel.setBorder(new LineBorder(Color.BLACK));
 		
-		billTitle();
+
 		
+		billTitle();
 		
 		
 		
@@ -50,6 +52,10 @@ public class BillingPanel extends JPanel{
         int MXN= cal.get(Calendar.MONTH);	
         int YY = cal.get(Calendar.YEAR);	
         int MON = MXN+1;
+        int lastMon = 0;
+        int lastDay = 0;
+        int lastYear = 0;
+        
 		JLabel title = new JLabel("Gully Momo",SwingConstants.CENTER);
 		title.setFont(new Font("Algerian",1,24));
 		title.setBounds(0,0,500,30);
@@ -102,6 +108,18 @@ public class BillingPanel extends JPanel{
 		amountLabel.setBounds(410,70,70,20);
 		invoicePane.add(amountLabel);
 		
+		JLabel billNoLabel = new JLabel("Bill No : "+String.valueOf(billNo+1), SwingConstants.CENTER);
+		billNoLabel.setFont(new Font("Arial",1,tableHeaderFontSize));
+		billNoLabel.setBounds(0,40,80,20);
+		invoicePane.add(billNoLabel);
+		
+		
+		
+//		if(MON==lastMon && DD==lastDay && YY == lastYear) {
+//			billNo++;
+//		}else {
+//			billNo=1;
+//		}
 		
 	}
 	

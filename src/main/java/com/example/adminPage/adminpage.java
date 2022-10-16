@@ -63,6 +63,7 @@ public class adminpage extends JPanel{
 				
 				com.example.additemPage.App app = new com.example.additemPage.App();
 				app.main(null);
+				mainFrame.frame.dispose();
 				
 			}
 		});{
@@ -109,6 +110,7 @@ public class adminpage extends JPanel{
 				com.example.deletePage.App app = new com.example.deletePage.App();
 				try {
 					app.main(null);
+					mainFrame.frame.dispose();
 				} catch (ClassNotFoundException | SQLException e1) {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();
@@ -157,6 +159,7 @@ public class adminpage extends JPanel{
 				com.example.edititemPage.App app = new com.example.edititemPage.App();
 				try {
 					app.main(null);
+					mainFrame.frame.dispose();
 				} catch (ClassNotFoundException | SQLException e1) {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();
@@ -201,9 +204,48 @@ public class adminpage extends JPanel{
 				// TODO Auto-generated method stub
 				com.example.showitemPage.App app = new com.example.showitemPage.App();
 				app.main(null);
+				mainFrame.frame.dispose();
 				
 			}
 		});{
+			JButton backButton = new JButton();
+			backButton.setText("HOME");
+//			editButton.setSize(new Dimension(150,450));
+			backButton.setBounds(450,500,400,80);
+			backButton.addMouseListener(new MouseListener() {
+				
+				@Override
+				public void mouseReleased(MouseEvent e) {
+					// TODO Auto-generated method stub
+					
+				}
+				
+				@Override
+				public void mousePressed(MouseEvent e) {
+					// TODO Auto-generated method stub
+					
+				}
+				
+				@Override
+				public void mouseExited(MouseEvent e) {
+					// TODO Auto-generated method stub
+					
+				}
+				
+				@Override
+				public void mouseEntered(MouseEvent e) {
+					// TODO Auto-generated method stub
+					
+				}
+				
+				@Override
+				public void mouseClicked(MouseEvent e) {
+					// TODO Auto-generated method stub
+					com.example.jdbc.AdminUser.main(null);
+					mainFrame.frame.dispose();
+				}
+			});
+			mainPanel.add(backButton);
 			
 		}
 		

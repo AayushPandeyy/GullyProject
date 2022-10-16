@@ -31,11 +31,11 @@ public class ProductCard extends JPanel {
 	static Product p;
 	static int a;
 	static int b;
-	static ArrayList<BilledProduct> billItems = new ArrayList<BilledProduct>();
+	public static ArrayList<BilledProduct> billItems = new ArrayList<BilledProduct>();
 	public static float total;
 	public ProductCard(Product p) throws IOException{
 		this.p=p;
-		
+		setBackground(Color.MAGENTA);
 		BufferedImage myPicture=null;
 		myPicture = ImageIO.read(new File("img/momo.png"));
 		
@@ -107,7 +107,7 @@ public class ProductCard extends JPanel {
 				}
 				
 				JPanel productTablePanel = new JPanel();
-				productTablePanel.setBackground(Color.green);
+				productTablePanel.setBackground(Color.yellow);
 				productTablePanel.setLayout(null);
 				productTablePanel.setBounds(0, 100, 500, 350);
 //				productTablePanel.setBorder(new LineBorder(Color.BLACK));
@@ -154,7 +154,7 @@ public class ProductCard extends JPanel {
 				MainFrame.billingPanel.invoicePane.revalidate();
 				MainFrame.billingPanel.invoicePane.repaint();
 				MainFrame.billingPanel.billTitle();
-				MainFrame.billingPanel.invoicePane.setLayout(new ScrollPaneLayout());
+//				MainFrame.billingPanel.invoicePane.setLayout(new ScrollPaneLayout());
 				
 				
 			}

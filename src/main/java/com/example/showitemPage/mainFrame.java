@@ -7,9 +7,10 @@ import javax.swing.JFrame;
 import com.example.adminPage.adminpage;
 
 public class mainFrame {
+	static JFrame frame;
 	static showitemPanel sPanel;
 	public mainFrame() {
-		JFrame frame = new JFrame("Main Frame");
+		 frame = new JFrame("Main Frame");
 		frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
 		//frame.setUndecorated(true);
 		frame.setDefaultCloseOperation(3);

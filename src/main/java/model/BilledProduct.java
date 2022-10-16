@@ -13,6 +13,12 @@ public class BilledProduct extends Product{
 
 	
 
+	public BilledProduct() {
+		// TODO Auto-generated constructor stub
+	}
+
+
+
 	public void setQuantity(int quantity) {
 		this.quantity = quantity;
 	}
