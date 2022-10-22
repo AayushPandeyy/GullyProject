@@ -86,5 +86,36 @@ public class BilledProductDao extends AbstractDao<BilledProduct>{
 		// TODO Auto-generated method stub
 		return 0;
 	}
+	
+	public ResultSet count() throws ClassNotFoundException, SQLException {
+		sql = "select item , COUNT(item) from dailyreport GROUP BY item HAVING COUNT(item)>=1;";
+		connect();
+		pstm = con.prepareStatement(sql);
+		ResultSet rs = pstm.executeQuery();
+		return rs;
+		
+				
+//		return null;
+		
+	}
+	public float getprice(String food) throws ClassNotFoundException, SQLException {
+		sql = "select price from dailyreport where item = ?";
+		connect();
+		pstm = con.prepareStatement(sql);
+		pstm.setString(1, food);
+		ResultSet price = pstm.executeQuery();
+		float p = 0;
+		if(price.next()) {
+			p = price.getFloat(1);
+		}
+		return p;
+	}
+	public int drop() throws ClassNotFoundException, SQLException {
+		sql = "delete from dailyreport";
+		connect();
+		int i = pstm.executeUpdate();
+		return i;
+	}
+	
 
 }

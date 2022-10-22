@@ -33,6 +33,7 @@ public class ProductCard extends JPanel {
 	static int b;
 	public static ArrayList<BilledProduct> billItems = new ArrayList<BilledProduct>();
 	public static float total;
+	public static ArrayList<Product> proItems = new ArrayList<>();
 	public ProductCard(Product p) throws IOException{
 		this.p=p;
 		setBackground(Color.MAGENTA);
@@ -77,6 +78,7 @@ public class ProductCard extends JPanel {
 			
 			@Override
 			public void mouseClicked(MouseEvent e) {
+				
 				BilledProduct bproduct = new BilledProduct(p,0);
 				total+=bproduct.getPrice();
 				System.out.println(billItems);
