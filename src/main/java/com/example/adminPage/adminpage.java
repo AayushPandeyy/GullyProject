@@ -13,7 +13,7 @@ import javax.swing.JButton;
 import javax.swing.JPanel;
 import com.example.additemPage.*;
 import com.example.showitemPage.*;
-import com.example.deletePage.*;
+
 
 public class adminpage extends JPanel{
 	public adminpage() {
@@ -23,12 +23,13 @@ public class adminpage extends JPanel{
 		JPanel mainPanel = new JPanel();
 		mainPanel.setLayout(null);
 		mainPanel.setPreferredSize(new Dimension(1000,750));
-		mainPanel.setBackground(Color.PINK);
+		mainPanel.setBackground(Color.green);
 		
 		JButton addButton = new JButton();
 //				addButton.setSize(new Dimension(150,150));
 		addButton.setText("Add Item");
-		addButton.setBounds(450,100,400,80);
+		addButton.setBounds(450,100,400,120);
+		addButton.setBackground(Color.cyan);
 		mainPanel.add(addButton);
 		
 		addButton.addMouseListener(new MouseListener() {
@@ -72,105 +73,15 @@ public class adminpage extends JPanel{
 		
 		
 		
-		JButton delButton = new JButton();
-		delButton.setText("Delete Item");
-		delButton.setBounds(450,200,400,80);
-//		editButton.setSize(new Dimension(150,150));
-		mainPanel.add(delButton);
 		
-		delButton.addMouseListener(new MouseListener() {
-			
-			@Override
-			public void mouseReleased(MouseEvent e) {
-				// TODO Auto-generated method stub
-				
-			}
-			
-			@Override
-			public void mousePressed(MouseEvent e) {
-				// TODO Auto-generated method stub
-				
-			}
-			
-			@Override
-			public void mouseExited(MouseEvent e) {
-				// TODO Auto-generated method stub
-				
-			}
-			
-			@Override
-			public void mouseEntered(MouseEvent e) {
-				// TODO Auto-generated method stub
-				
-			}
-			
-			@Override
-			public void mouseClicked(MouseEvent e) {
-				// TODO Auto-generated method stub
-				com.example.deletePage.App app = new com.example.deletePage.App();
-				try {
-					app.main(null);
-					mainFrame.frame.dispose();
-				} catch (ClassNotFoundException | SQLException e1) {
-					// TODO Auto-generated catch block
-					e1.printStackTrace();
-				}
-				
-			}
-		});{
-			
-		}
 		
-		JButton editButton = new JButton();
-		editButton.setText("Edit Item");
-//		editButton.setSize(new Dimension(150,450));
-		editButton.setBounds(450,300,400,80);
-		mainPanel.add(editButton);
 		
-		editButton.addMouseListener(new MouseListener() {
-			
-			@Override
-			public void mouseReleased(MouseEvent e) {
-				// TODO Auto-generated method stub
-				
-			}
-			
-			@Override
-			public void mousePressed(MouseEvent e) {
-				// TODO Auto-generated method stub
-				
-			}
-			
-			@Override
-			public void mouseExited(MouseEvent e) {
-				// TODO Auto-generated method stub
-				
-			}
-			
-			@Override
-			public void mouseEntered(MouseEvent e) {
-				// TODO Auto-generated method stub
-				
-			}
-			
-			@Override
-			public void mouseClicked(MouseEvent e) {
-				// TODO Auto-generated method stub
-				com.example.edititemPage.App app = new com.example.edititemPage.App();
-				try {
-					app.main(null);
-					mainFrame.frame.dispose();
-				} catch (ClassNotFoundException | SQLException e1) {
-					// TODO Auto-generated catch block
-					e1.printStackTrace();
-				}
-			}
-		});
 		
 		JButton showButton = new JButton();
 		showButton.setText("Show Item");
+		showButton.setBackground(Color.cyan);
 //		editButton.setSize(new Dimension(150,450));
-		showButton.setBounds(450,400,400,80);
+		showButton.setBounds(450,300,400,120);
 		mainPanel.add(showButton);
 		
 		showButton.addMouseListener(new MouseListener() {
@@ -211,7 +122,8 @@ public class adminpage extends JPanel{
 			JButton backButton = new JButton();
 			backButton.setText("HOME");
 //			editButton.setSize(new Dimension(150,450));
-			backButton.setBounds(450,500,400,80);
+			backButton.setBackground(Color.cyan);
+			backButton.setBounds(450,500,400,120);
 			backButton.addMouseListener(new MouseListener() {
 				
 				@Override

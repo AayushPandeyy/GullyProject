@@ -11,6 +11,7 @@ import java.io.IOException;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
+import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JScrollPane;
 import javax.swing.JTabbedPane;
@@ -27,10 +28,11 @@ public class MainFrame{
 	public MainFrame() throws IOException {
 		
     	 
-    	
-		frame = new JFrame("Main Frame");
+    	ImageIcon img = new ImageIcon("img/momo.png");
+		frame = new JFrame("The Gully Momo");
 		frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
 		//frame.setUndecorated(true);
+		frame.setIconImage(img.getImage());
 		frame.setDefaultCloseOperation(3);
 		frame.setLayout(new BorderLayout());
 		frame.addKeyListener(new KeyListener() {

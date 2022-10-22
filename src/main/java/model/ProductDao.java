@@ -6,7 +6,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 
 import com.example.additemPage.mainPanel;
-import com.example.deletePage.*;
+
 
 public class ProductDao extends AbstractDao<Product> {
 	
