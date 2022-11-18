@@ -4,6 +4,8 @@
  */
 package com.example.jdbc;
 
+import javax.swing.ImageIcon;
+
 /**
  *
  * @author Acer
@@ -26,6 +28,8 @@ public class SplashScreen extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+    	ImageIcon img = new ImageIcon("img/momo.png");
+		setIconImage(img.getImage());
         bgPanel = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         heading = new javax.swing.JLabel();

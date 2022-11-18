@@ -5,6 +5,7 @@ import java.awt.Color;
 import java.awt.Dimension;
 import java.sql.SQLException;
 
+import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 
 public class mainFrame {
@@ -12,6 +13,8 @@ public static JFrame frame;
 		public mainFrame() throws ClassNotFoundException, SQLException {
 			frame = new JFrame("Main Frame");
 //			frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
+			ImageIcon img = new ImageIcon("img/momo.png");
+			frame.setIconImage(img.getImage());
 			//frame.setUndecorated(true);
 			frame.setDefaultCloseOperation(3);
 			frame.setResizable(false);

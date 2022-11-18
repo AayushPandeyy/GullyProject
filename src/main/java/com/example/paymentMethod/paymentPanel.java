@@ -35,7 +35,7 @@ public class paymentPanel extends JPanel{
 		buttons.setLayout(new GridLayout(0,2,20,20));
 		for(i=0;i<meth.length;i++) {
 			method = meth[i];
-			JButton jb = new JButton(String.valueOf(meth[i]));
+			JButton jb = new JButton(String.valueOf(method));
 			
 			jb.setFont(new Font("Arial",1,24));
 			jb.setBackground(Color.red);
@@ -72,7 +72,7 @@ public class paymentPanel extends JPanel{
 				public void mouseClicked(MouseEvent e) {
 					// TODO Auto-generated method stub
 					ArrayList<BilledProduct> bpro = new ArrayList<>();
-					JLabel paymentLabel = new JLabel("Payment Method : "+method,SwingConstants.CENTER);
+					JLabel paymentLabel = new JLabel("Payment Method : "+jb.getText(),SwingConstants.CENTER);
 					paymentLabel.setFont(new Font("Arial",1,14));
 					paymentLabel.setBounds(170,490,200,20);
 					BillingPanel.invoicePane.add(paymentLabel);

@@ -1,4 +1,4 @@
-package com.example.adminLogin;
+package com.example.userLogin;
 
 import java.awt.BorderLayout;
 
@@ -9,10 +9,10 @@ public class mainFrame {
 	public mainFrame() {
 		frame = new JFrame("Main Frame");
 		frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
-		//frame.setUndecorated(true);
-//		frame.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
 		ImageIcon img = new ImageIcon("img/momo.png");
 		frame.setIconImage(img.getImage());
+		//frame.setUndecorated(true);
+		frame.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
 		frame.setLayout(new BorderLayout());
 		topPanel tpanel = new topPanel();
 		frame.add(tpanel,BorderLayout.NORTH);
@@ -24,6 +24,8 @@ public class mainFrame {
 		frame.setVisible(true);
 		
 	}
-	
+	public void exit() {
+		frame.dispose();
+	}
 	
 }

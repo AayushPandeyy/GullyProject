@@ -5,6 +5,7 @@ import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.sql.SQLException;
 
+import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
@@ -17,6 +18,8 @@ public class mainFrame {
 	ProductDao pdao = new ProductDao();
 	public mainFrame() throws ClassNotFoundException, SQLException {
 		 frame = new JFrame("Main Frame");
+		 ImageIcon img = new ImageIcon("img/momo.png");
+			frame.setIconImage(img.getImage());
 		frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
 		//frame.setUndecorated(true);
 		frame.setDefaultCloseOperation(3);

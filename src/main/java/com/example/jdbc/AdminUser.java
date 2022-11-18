@@ -1,10 +1,15 @@
 
+
 package com.example.jdbc;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
+
 import com.example.adminLogin.*;
 
+import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 
 
@@ -26,6 +31,9 @@ public class AdminUser extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+    	
+    	ImageIcon img = new ImageIcon("img/momo.png");
+		setIconImage(img.getImage());
         jMenu1 = new javax.swing.JMenu();
         jPanel1 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
@@ -49,20 +57,43 @@ public class AdminUser extends javax.swing.JFrame {
         jButton1.setFont(new java.awt.Font("Yu Gothic UI Light", 0, 24)); // NOI18N
         jButton1.setText("Admin Login");
         jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jButton1.addActionListener(new ActionListener() {
+        jButton1.addMouseListener(new MouseListener() {
 			
 			@Override
-			public void actionPerformed(ActionEvent e) {
+			public void mouseReleased(MouseEvent e) {
 				// TODO Auto-generated method stub
 				
-				
-				com.example.adminLogin.App app = new com.example.adminLogin.App();
-				app.main(null);
+			}
+			
+			@Override
+			public void mousePressed(MouseEvent e) {
+				// TODO Auto-generated method stub
 				
 			}
-		});{
-        	
-        }
+			
+			@Override
+			public void mouseExited(MouseEvent e) {
+				// TODO Auto-generated method stub
+				
+			}
+			
+			@Override
+			public void mouseEntered(MouseEvent e) {
+				// TODO Auto-generated method stub
+				
+			}
+			
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				// TODO Auto-generated method stub
+				com.example.adminLogin.App.main(null);
+				dispose();
+				
+			}
+			
+		});
+        
+        
 
         jButton2.setBackground(new java.awt.Color(204, 255, 204));
         jButton2.setFont(new java.awt.Font("Yu Gothic UI Light", 0, 24)); // NOI18N
@@ -115,8 +146,7 @@ public class AdminUser extends javax.swing.JFrame {
 
         jLabel3.setForeground(new java.awt.Color(255, 51, 0));
         jLabel3.setIcon(new javax.swing.ImageIcon("D:\\Downloads\\logoo.png")); // NOI18N
-        jLabel3.setLabelFor(jLabel3);
-        jLabel3.setText("hello");
+        
         jLabel3.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
         jLabel3.setAlignmentY(0.0F);
         jLabel3.setIconTextGap(-100);
@@ -188,16 +218,12 @@ public class AdminUser extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-        this.dispose();
-        new AdminLogin().setVisible(true);
-    }//GEN-LAST:event_jButton1ActionPerformed
+    
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
         this.dispose();
-        new LoginPage().setVisible(true);
+        com.example.userLogin.App.main(null);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jLabel3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel3MouseClicked
@@ -234,6 +260,7 @@ public class AdminUser extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
+            	
                 new AdminUser().setVisible(true);
             }
         });

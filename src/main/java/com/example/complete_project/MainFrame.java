@@ -27,11 +27,12 @@ public class MainFrame{
 	static String title;
 	public MainFrame() throws IOException {
 		
+		
     	 
-    	ImageIcon img = new ImageIcon("img/momo.png");
 		frame = new JFrame("The Gully Momo");
 		frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
 		//frame.setUndecorated(true);
+		ImageIcon img = new ImageIcon("img/momo.png");
 		frame.setIconImage(img.getImage());
 		frame.setDefaultCloseOperation(3);
 		frame.setLayout(new BorderLayout());

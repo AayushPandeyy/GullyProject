@@ -4,6 +4,7 @@ import java.awt.BorderLayout;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
+import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
@@ -18,7 +19,8 @@ public class mainFrame {
 		 frame = new JFrame("Main Frame");
 		frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
 		mainPanel mpanel = new mainPanel();
-		
+		ImageIcon img = new ImageIcon("img/momo.png");
+		frame.setIconImage(img.getImage());
 		
 		//frame.setUndecorated(true);
 		frame.setDefaultCloseOperation(3);

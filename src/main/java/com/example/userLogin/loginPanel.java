@@ -1,4 +1,4 @@
-package com.example.adminLogin;
+package com.example.userLogin;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
@@ -63,7 +63,7 @@ public class loginPanel extends JPanel{
 		
 		JButton loginButton = new JButton();
 		loginButton.setText("Login");
-		loginButton.setBackground(Color.decode("#5e8ed6"));
+		loginButton.setBackground(Color.LIGHT_GRAY);
 		loginButton.setBounds(400,300,400,30);
 		mainPanel.add(loginButton);
 		
@@ -87,7 +87,7 @@ public class loginPanel extends JPanel{
 			public void mouseExited(MouseEvent e) {
 				// TODO Auto-generated method stub
 				
-				loginButton.setBackground(Color.decode("#5e8ed6"));
+				loginButton.setBackground(Color.LIGHT_GRAY);
 				
 			}
 			
@@ -105,12 +105,10 @@ public class loginPanel extends JPanel{
 				String pass = pwField.getText();
 				try {
 					loginDo(uname,pass);
-					
 				} catch (ClassNotFoundException | SQLException | IOException e1) {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();
 				}
-				
 			}
 		});{
 			
@@ -120,10 +118,9 @@ public class loginPanel extends JPanel{
 	}
 	public void loginDo(String uname , String pw) throws SQLException,ClassNotFoundException, IOException{
 		pdao.connect();
-		String useSql = "use foods";
-		String sql = "select * from adminlogin";
-		pstm = pdao.con.prepareStatement(useSql);
-		pstm.executeUpdate();
+		
+		String sql = "select * from userlogin";
+		
         int i=0;
         
         pstm = pdao.con.prepareStatement(sql);
@@ -131,7 +128,7 @@ public class loginPanel extends JPanel{
         while(rs.next()){
             if(rs.getString(2).equals(uname) && rs.getString(3).equals(pw)){
                 i=1;
-                com.example.adminPage.App app = new com.example.adminPage.App();
+                com.example.complete_project.App app = new com.example.complete_project.App();
                 		app.main(null);
                 
                 		mainFrame.frame.dispose();

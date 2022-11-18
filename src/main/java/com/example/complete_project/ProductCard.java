@@ -38,7 +38,7 @@ public class ProductCard extends JPanel {
 		this.p=p;
 		setBackground(Color.MAGENTA);
 		BufferedImage myPicture=null;
-		myPicture = ImageIO.read(new File("img/momo.png"));
+		myPicture = ImageIO.read(getClass().getClassLoader().getResource("img/momo.png"));
 		
 		JLabel picLabel = new JLabel(new ImageIcon(myPicture.getScaledInstance(150, 150,Image.SCALE_SMOOTH)));
 		/*

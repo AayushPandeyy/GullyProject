@@ -15,6 +15,7 @@ import java.util.GregorianCalendar;
 
 import javax.swing.JButton;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.SwingConstants;
 
@@ -62,6 +63,7 @@ public class footerPanel extends JPanel{
 		totalButton.setText("Total");
 		totalButton.setFont(new Font("Arial",1,18));
 		totalButton.setBackground(Color.GREEN);
+//		resetButton.setOpaque(false);
 		resetButton.addMouseListener(new MouseListener() {
 			
 			@Override
@@ -176,17 +178,18 @@ public class footerPanel extends JPanel{
 			public void mouseClicked(MouseEvent e) {
 				
 				if(pcard.billItems.size()==0) {
-					items(100);
+					JOptionPane.showMessageDialog(null, "No Item has been ordered.");
 				}else {
 					items(pcard.b);
+					com.example.discount.App app = new com.example.discount.App();
+					try {
+						app.main(null);
+					} catch (ClassNotFoundException | SQLException e1) {
+						// TODO Auto-generated catch block
+						e1.printStackTrace();
+					}
 				}
-				com.example.discount.App app = new com.example.discount.App();
-				try {
-					app.main(null);
-				} catch (ClassNotFoundException | SQLException e1) {
-					// TODO Auto-generated catch block
-					e1.printStackTrace();
-				}
+				
 				}
 				
 				

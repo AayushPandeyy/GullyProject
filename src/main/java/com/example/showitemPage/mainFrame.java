@@ -2,6 +2,7 @@ package com.example.showitemPage;
 
 import java.awt.BorderLayout;
 
+import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 
 import com.example.adminPage.adminpage;
@@ -11,6 +12,8 @@ public class mainFrame {
 	static showitemPanel sPanel;
 	public mainFrame() {
 		 frame = new JFrame("Main Frame");
+		 ImageIcon img = new ImageIcon("img/momo.png");
+			frame.setIconImage(img.getImage());
 		frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
 		//frame.setUndecorated(true);
 		frame.setDefaultCloseOperation(3);

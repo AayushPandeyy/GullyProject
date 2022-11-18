@@ -23,12 +23,12 @@ public class adminpage extends JPanel{
 		JPanel mainPanel = new JPanel();
 		mainPanel.setLayout(null);
 		mainPanel.setPreferredSize(new Dimension(1000,750));
-		mainPanel.setBackground(Color.green);
+		mainPanel.setBackground(Color.decode("#bfbd32"));
 		
 		JButton addButton = new JButton();
 //				addButton.setSize(new Dimension(150,150));
 		addButton.setText("Add Item");
-		addButton.setBounds(450,100,400,120);
+		addButton.setBounds(450,50,400,120);
 		addButton.setBackground(Color.cyan);
 		mainPanel.add(addButton);
 		
@@ -81,7 +81,7 @@ public class adminpage extends JPanel{
 		showButton.setText("Show Item");
 		showButton.setBackground(Color.cyan);
 //		editButton.setSize(new Dimension(150,450));
-		showButton.setBounds(450,300,400,120);
+		showButton.setBounds(450,200,400,120);
 		mainPanel.add(showButton);
 		
 		showButton.addMouseListener(new MouseListener() {
@@ -123,7 +123,7 @@ public class adminpage extends JPanel{
 			backButton.setText("HOME");
 //			editButton.setSize(new Dimension(150,450));
 			backButton.setBackground(Color.cyan);
-			backButton.setBounds(450,500,400,120);
+			backButton.setBounds(450,350,400,120);
 			backButton.addMouseListener(new MouseListener() {
 				
 				@Override
